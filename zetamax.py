@@ -1,5 +1,4 @@
 import random
-import os
 from helperFunctions import printQuestion, checkAnswer, clearScreen
 import time
 
@@ -9,13 +8,17 @@ allowedOperations = ['+', '-', '*', '/']
 operations = []
 
 # initialise variables
-print("ZZZzZZZzzzzzzzZZzetamax")
+print("BOotinG ZZZzZZZzzzzzzzZZzetamax")
 print("\n")
+print("Press any key to start.")
+input()
 
 # user chooses the operations they would like to include
 try_again = 0
 while True:
     clearScreen()
+    print("Type q to quit.")
+    print("\n")
     print("Choose your desired operations.\nTo do so, please type in '+', '-', '*' or '/' separated by spaces for your corresponding desired operations.")
     
     if try_again:
@@ -26,6 +29,9 @@ while True:
     if not user_operations: 
         try_again = 1
         continue
+
+    if 'q' in user_operations:
+        exit()
 
     for i in range(len(user_operations)):
         if user_operations[i] in allowedOperations:
@@ -43,12 +49,17 @@ try_again = 0
 while True:
 
     clearScreen()
+    print("Type q to quit.")
+    print("\n")
     print("Set your desired time limit:")
 
     if try_again == 1:
         print("Invalid time limit. Please enter a positive integer.")
 
     time_limit = input()
+
+    if time_limit == 'q':
+        exit()
 
     if not time_limit.isdigit():
         try_again = 1
@@ -76,6 +87,8 @@ while time.time() < time_end:
 
     # reset the screen
     clearScreen()
+    print("Type q to quit.")
+    print("\n")
 
     # if the previous input was invalid or wrong let them know
     if prev_q_num == q_num:
@@ -102,6 +115,9 @@ while time.time() < time_end:
 
     
     user = input()
+
+    if user == 'q':
+        exit()
 
     try:
         user = int(user)
