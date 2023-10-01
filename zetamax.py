@@ -7,8 +7,6 @@ clearScreen()
 allowedOperations = ['+', '-', '*', '/']
 operations = []
 
-print("hi")
-
 # initialise variables
 print("BOotinG ZZZzZZZzzzzzzzZZzetamax")
 print("\n")
