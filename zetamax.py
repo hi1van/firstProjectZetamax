@@ -10,7 +10,7 @@ operations = []
 # initialise variables
 print("BOotinG ZZZzZZZzzzzzzzZZzetamax")
 print("\n")
-print("Press any key to start.")
+print("Press Enter to start.")
 input()
 
 # user chooses the operations they would like to include
@@ -51,7 +51,7 @@ while True:
     clearScreen()
     print("Type q to quit.")
     print("\n")
-    print("Set your desired time limit:")
+    print("Set your desired time limit (in seconds):")
 
     if try_again == 1:
         print("Invalid time limit. Please enter a positive integer.")
@@ -107,6 +107,9 @@ while time.time() < time_end:
         if operation == '/':
             n2 = random.randint(0,100)
             n1 = random.randint(0,10) * n2
+        elif operation == '*':
+            n1 = random.randint(0, 50)
+            n2 = random.randint(0, 50)
         else:
             n1 = random.randint(0,100)
             n2 = random.randint(0,100)
